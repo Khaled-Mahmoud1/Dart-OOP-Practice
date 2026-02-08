@@ -8,6 +8,7 @@ class User {
 
   User();
 
+  // getter and setter methods for private variables
   String? get name => _name;
   String? get email => _email;
   double get balance => _balance;
@@ -32,29 +33,4 @@ class User {
   String toString() {
     return "User(name: $_name, email: $_email, balance: $_balance)";
   }
-
-  // old way to access private variables using get .. set methods
-  // setName(String name) {
-  //   _name = name;
-  // }
-
-  // String? getName() {
-  //   return _name;
-  // }
-
-  // setEmail(String email) {
-  //   _email = email;
-  // }
-
-  // String? getEmail() {
-  //   return _email;
-  // }
-
-  // setBalance(double balance) {
-  //   _balance = balance;
-  // }
-
-  // double getBalance() {
-  //   return _balance;
-  // }
 }
