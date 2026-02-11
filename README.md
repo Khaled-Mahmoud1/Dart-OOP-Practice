@@ -30,6 +30,8 @@ The goal of this repo is to build a **strong OOP foundation** before moving to *
 - Method Overriding
 - Generics
 - Enums
+- Mixin
+- Asynchronous Programming
 
 ### 🔹 Dart Specific Concepts
 - Null Safety
