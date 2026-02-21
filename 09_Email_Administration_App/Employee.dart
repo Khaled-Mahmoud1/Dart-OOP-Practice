@@ -27,17 +27,12 @@ class Employee {
     Random random = Random();
     return List.generate(
       length,
-      (index) => chars[random.nextInt(chars.length)],
+      (_) => chars[random.nextInt(chars.length)],
     ).join();
   }
 
   void changePassword(String newPassword) {
     _password = newPassword;
-    print("Password changed successfully");
-  }
-
-  void setMailboxCapacity(int capacity) {
-    mailboxCapacity = capacity;
   }
 
   void setAlternateEmail(String altEmail) {
@@ -52,6 +47,5 @@ class Employee {
     print("Password : $_password");
     print("Mailbox Capacity : $mailboxCapacity MB");
     print("Alternate Email : ${alternateEmail ?? "Not set"}");
-    print("=========================");
   }
 }
