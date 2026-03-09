@@ -62,6 +62,22 @@ class ContactManager {
       print("Contact not found.");
     }
   }
+
+  void editContact() {
+    print("Enter name to edit:");
+    String name = stdin.readLineSync()!;
+
+    if (contacts.containsKey(name)) {
+      print("Enter new phone:");
+      String newPhone = stdin.readLineSync()!;
+
+      contacts[name]!.phone = newPhone;
+
+      print("Contact updated successfully.");
+    } else {
+      print("Contact not found.");
+    }
+  }
 }
 
 void main() {
@@ -73,7 +89,8 @@ void main() {
     print("2. View Contacts");
     print("3. Search Contact");
     print("4. Delete Contact");
-    print("5. Exit");
+    print("5. Edit Contact");
+    print("6. Exit");
 
     print("Choose option:");
     int choice = int.parse(stdin.readLineSync()!);
@@ -96,6 +113,10 @@ void main() {
         break;
 
       case 5:
+        manager.editContact();
+        break;
+
+      case 6:
         print("Goodbye!");
         return;
 
